@@ -1,0 +1,547 @@
+2026-11-16 10:29:49,950 | INFO | ===== INICIO DE LA DEMOSTRACIÓN =====
+2026-11-16 10:29:49,951 | INFO | Cliente registrado: C001.
+2026-11-16 10:29:49,951 | INFO | Operación 1 finalizada; el sistema continúa activo.
+2026-11-16 10:29:49,951 | INFO | Cliente registrado: C002.
+2026-11-16 10:29:49,951 | INFO | Operación 2 finalizada; el sistema continúa activo.
+2026-11-16 10:29:49,951 | ERROR | Operación 3 (error esperado): Cliente con NOMBRE inválido ('X'); correo y teléfono válidos
+Traceback (most recent call last):
+  File "c:\Users\ALEX JEFFERSON JR\Documents\INGENIERIA DE SISTEMAS - UNAD\MIS CURSOS\PERIODO 3 2026\5 - PROGRAMACION\213023_125_Ramirez - Fase 4\Proyecto_Fase4_SoftwareFJ.py", line 238, in nombre
+    self._nombre = validar_texto(valor, "El nombre", minimo=2)
+                   ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\ALEX JEFFERSON JR\Documents\INGENIERIA DE SISTEMAS - UNAD\MIS CURSOS\PERIODO 3 2026\5 - PROGRAMACION\213023_125_Ramirez - Fase 4\Proyecto_Fase4_SoftwareFJ.py", line 173, in validar_texto
+    raise DatosInvalidosError(
+        f"{nombre}: debe tener al menos {minimo} caracter(es)."
+    )
+DatosInvalidosError: El nombre: debe tener al menos 2 caracter(es).
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "c:\Users\ALEX JEFFERSON JR\Documents\INGENIERIA DE SISTEMAS - UNAD\MIS CURSOS\PERIODO 3 2026\5 - PROGRAMACION\213023_125_Ramirez - Fase 4\Proyecto_Fase4_SoftwareFJ.py", line 710, in ejecutar
+    salida = funcion()
+  File "c:\Users\ALEX JEFFERSON JR\Documents\INGENIERIA DE SISTEMAS - UNAD\MIS CURSOS\PERIODO 3 2026\5 - PROGRAMACION\213023_125_Ramirez - Fase 4\Proyecto_Fase4_SoftwareFJ.py", line 853, in <lambda>
+    lambda: Cliente("C003", "X", "ok@email.com", "3001112233"),
+            ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\ALEX JEFFERSON JR\Documents\INGENIERIA DE SISTEMAS - UNAD\MIS CURSOS\PERIODO 3 2026\5 - PROGRAMACION\213023_125_Ramirez - Fase 4\Proyecto_Fase4_SoftwareFJ.py", line 226, in __init__
+    self.nombre = nombre
+    ^^^^^^^^^^^
+  File "c:\Users\ALEX JEFFERSON JR\Documents\INGENIERIA DE SISTEMAS - UNAD\MIS CURSOS\PERIODO 3 2026\5 - PROGRAMACION\213023_125_Ramirez - Fase 4\Proyecto_Fase4_SoftwareFJ.py", line 240, in nombre
+    raise DatosInvalidosError(
+        f"No se pudo asignar el nombre del cliente. {error}") from error
+DatosInvalidosError: No se pudo asignar el nombre del cliente. El nombre: debe tener al menos 2 caracter(es).
+2026-11-16 10:29:49,953 | INFO | Operación 3 finalizada; el sistema continúa activo.
+2026-11-16 10:29:49,953 | ERROR | Operación 4 (error esperado): Cliente con CORREO inválido; nombre y teléfono válidos
+Traceback (most recent call last):
+  File "c:\Users\ALEX JEFFERSON JR\Documents\INGENIERIA DE SISTEMAS - UNAD\MIS CURSOS\PERIODO 3 2026\5 - PROGRAMACION\213023_125_Ramirez - Fase 4\Proyecto_Fase4_SoftwareFJ.py", line 710, in ejecutar
+    salida = funcion()
+  File "c:\Users\ALEX JEFFERSON JR\Documents\INGENIERIA DE SISTEMAS - UNAD\MIS CURSOS\PERIODO 3 2026\5 - PROGRAMACION\213023_125_Ramirez - Fase 4\Proyecto_Fase4_SoftwareFJ.py", line 857, in <lambda>
+    lambda: Cliente("C004", "Laura Pérez", "correo-invalido", "3001112233"),
+            ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\ALEX JEFFERSON JR\Documents\INGENIERIA DE SISTEMAS - UNAD\MIS CURSOS\PERIODO 3 2026\5 - PROGRAMACION\213023_125_Ramirez - Fase 4\Proyecto_Fase4_SoftwareFJ.py", line 227, in __init__
+    self.correo = correo
+    ^^^^^^^^^^^
+  File "c:\Users\ALEX JEFFERSON JR\Documents\INGENIERIA DE SISTEMAS - UNAD\MIS CURSOS\PERIODO 3 2026\5 - PROGRAMACION\213023_125_Ramirez - Fase 4\Proyecto_Fase4_SoftwareFJ.py", line 251, in correo
+    raise DatosInvalidosError(
+    ...<2 lines>...
+    )
+DatosInvalidosError: El correo electrónico no tiene un formato válido (se recibió 'correo-invalido').
+2026-11-16 10:29:49,999 | INFO | Operación 4 finalizada; el sistema continúa activo.
+2026-11-16 10:29:49,999 | ERROR | Operación 5 (error esperado): Cliente con TELÉFONO inválido ('123'); nombre y correo válidos
+Traceback (most recent call last):
+  File "c:\Users\ALEX JEFFERSON JR\Documents\INGENIERIA DE SISTEMAS - UNAD\MIS CURSOS\PERIODO 3 2026\5 - PROGRAMACION\213023_125_Ramirez - Fase 4\Proyecto_Fase4_SoftwareFJ.py", line 710, in ejecutar
+    salida = funcion()
+  File "c:\Users\ALEX JEFFERSON JR\Documents\INGENIERIA DE SISTEMAS - UNAD\MIS CURSOS\PERIODO 3 2026\5 - PROGRAMACION\213023_125_Ramirez - Fase 4\Proyecto_Fase4_SoftwareFJ.py", line 861, in <lambda>
+    lambda: Cliente("C005", "Mario Gómez", "mario@email.com", "123"),
+            ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\ALEX JEFFERSON JR\Documents\INGENIERIA DE SISTEMAS - UNAD\MIS CURSOS\PERIODO 3 2026\5 - PROGRAMACION\213023_125_Ramirez - Fase 4\Proyecto_Fase4_SoftwareFJ.py", line 228, in __init__
+    self.telefono = telefono
+    ^^^^^^^^^^^^^
+  File "c:\Users\ALEX JEFFERSON JR\Documents\INGENIERIA DE SISTEMAS - UNAD\MIS CURSOS\PERIODO 3 2026\5 - PROGRAMACION\213023_125_Ramirez - Fase 4\Proyecto_Fase4_SoftwareFJ.py", line 271, in telefono
+    raise DatosInvalidosError(
+        "El teléfono debe contener entre 7 y 15 dígitos."
+    )
+DatosInvalidosError: El teléfono debe contener entre 7 y 15 dígitos.
+2026-11-16 10:29:50,000 | INFO | Operación 5 finalizada; el sistema continúa activo.
+2026-11-16 10:29:50,000 | ERROR | Operación 6 (error esperado): Cliente con NOMBRE de tipo incorrecto (None)
+Traceback (most recent call last):
+  File "c:\Users\ALEX JEFFERSON JR\Documents\INGENIERIA DE SISTEMAS - UNAD\MIS CURSOS\PERIODO 3 2026\5 - PROGRAMACION\213023_125_Ramirez - Fase 4\Proyecto_Fase4_SoftwareFJ.py", line 238, in nombre
+    self._nombre = validar_texto(valor, "El nombre", minimo=2)
+                   ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\ALEX JEFFERSON JR\Documents\INGENIERIA DE SISTEMAS - UNAD\MIS CURSOS\PERIODO 3 2026\5 - PROGRAMACION\213023_125_Ramirez - Fase 4\Proyecto_Fase4_SoftwareFJ.py", line 168, in validar_texto
+    raise DatosInvalidosError(
+        f"{nombre}: se esperaba texto y se recibió {type(valor).__name__}."
+    )
+DatosInvalidosError: El nombre: se esperaba texto y se recibió NoneType.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "c:\Users\ALEX JEFFERSON JR\Documents\INGENIERIA DE SISTEMAS - UNAD\MIS CURSOS\PERIODO 3 2026\5 - PROGRAMACION\213023_125_Ramirez - Fase 4\Proyecto_Fase4_SoftwareFJ.py", line 710, in ejecutar
+    salida = funcion()
+  File "c:\Users\ALEX JEFFERSON JR\Documents\INGENIERIA DE SISTEMAS - UNAD\MIS CURSOS\PERIODO 3 2026\5 - PROGRAMACION\213023_125_Ramirez - Fase 4\Proyecto_Fase4_SoftwareFJ.py", line 865, in <lambda>
+    lambda: Cliente("C006", None, "ok@email.com", "3001112233"),
+            ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\ALEX JEFFERSON JR\Documents\INGENIERIA DE SISTEMAS - UNAD\MIS CURSOS\PERIODO 3 2026\5 - PROGRAMACION\213023_125_Ramirez - Fase 4\Proyecto_Fase4_SoftwareFJ.py", line 226, in __init__
+    self.nombre = nombre
+    ^^^^^^^^^^^
+  File "c:\Users\ALEX JEFFERSON JR\Documents\INGENIERIA DE SISTEMAS - UNAD\MIS CURSOS\PERIODO 3 2026\5 - PROGRAMACION\213023_125_Ramirez - Fase 4\Proyecto_Fase4_SoftwareFJ.py", line 240, in nombre
+    raise DatosInvalidosError(
+        f"No se pudo asignar el nombre del cliente. {error}") from error
+DatosInvalidosError: No se pudo asignar el nombre del cliente. El nombre: se esperaba texto y se recibió NoneType.
+2026-11-16 10:29:50,000 | INFO | Operación 6 finalizada; el sistema continúa activo.
+2026-11-16 10:29:50,000 | ERROR | Operación 7 (error esperado): Cliente duplicado (mismo identificador C001)
+Traceback (most recent call last):
+  File "c:\Users\ALEX JEFFERSON JR\Documents\INGENIERIA DE SISTEMAS - UNAD\MIS CURSOS\PERIODO 3 2026\5 - PROGRAMACION\213023_125_Ramirez - Fase 4\Proyecto_Fase4_SoftwareFJ.py", line 710, in ejecutar
+    salida = funcion()
+  File "c:\Users\ALEX JEFFERSON JR\Documents\INGENIERIA DE SISTEMAS - UNAD\MIS CURSOS\PERIODO 3 2026\5 - PROGRAMACION\213023_125_Ramirez - Fase 4\Proyecto_Fase4_SoftwareFJ.py", line 869, in <lambda>
+    lambda: sistema.registrar_cliente(
+            ~~~~~~~~~~~~~~~~~~~~~~~~~^
+        Cliente("C001", "Otra Persona", "otra@email.com", "3009998877")),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\ALEX JEFFERSON JR\Documents\INGENIERIA DE SISTEMAS - UNAD\MIS CURSOS\PERIODO 3 2026\5 - PROGRAMACION\213023_125_Ramirez - Fase 4\Proyecto_Fase4_SoftwareFJ.py", line 557, in registrar_cliente
+    raise DatosInvalidosError("Ya existe un cliente con ese identificador.")
+DatosInvalidosError: Ya existe un cliente con ese identificador.
+2026-11-16 10:29:50,001 | INFO | Operación 7 finalizada; el sistema continúa activo.
+2026-11-16 10:29:50,001 | INFO | Servicio registrado: S001.
+2026-11-16 10:29:50,001 | INFO | Operación 8 finalizada; el sistema continúa activo.
+2026-11-16 10:29:50,001 | INFO | Servicio registrado: S002.
+2026-11-16 10:29:50,001 | INFO | Operación 9 finalizada; el sistema continúa activo.
+2026-11-16 10:29:50,001 | INFO | Servicio registrado: S003.
+2026-11-16 10:29:50,001 | INFO | Operación 10 finalizada; el sistema continúa activo.
+2026-11-16 10:29:50,001 | ERROR | Operación 11 (error esperado): Servicio con tarifa de tipo texto ('gratis')
+Traceback (most recent call last):
+  File "c:\Users\ALEX JEFFERSON JR\Documents\INGENIERIA DE SISTEMAS - UNAD\MIS CURSOS\PERIODO 3 2026\5 - PROGRAMACION\213023_125_Ramirez - Fase 4\Proyecto_Fase4_SoftwareFJ.py", line 710, in ejecutar
+    salida = funcion()
+  File "c:\Users\ALEX JEFFERSON JR\Documents\INGENIERIA DE SISTEMAS - UNAD\MIS CURSOS\PERIODO 3 2026\5 - PROGRAMACION\213023_125_Ramirez - Fase 4\Proyecto_Fase4_SoftwareFJ.py", line 916, in <lambda>
+    lambda: ReservaSala("S004", "gratis", 10),
+            ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\ALEX JEFFERSON JR\Documents\INGENIERIA DE SISTEMAS - UNAD\MIS CURSOS\PERIODO 3 2026\5 - PROGRAMACION\213023_125_Ramirez - Fase 4\Proyecto_Fase4_SoftwareFJ.py", line 384, in __init__
+    super().__init__(identificador, "Reserva de sala", tarifa_hora)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\ALEX JEFFERSON JR\Documents\INGENIERIA DE SISTEMAS - UNAD\MIS CURSOS\PERIODO 3 2026\5 - PROGRAMACION\213023_125_Ramirez - Fase 4\Proyecto_Fase4_SoftwareFJ.py", line 291, in __init__
+    validar_numero(tarifa, "La tarifa", minimo=0, estricto_minimo=True)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\ALEX JEFFERSON JR\Documents\INGENIERIA DE SISTEMAS - UNAD\MIS CURSOS\PERIODO 3 2026\5 - PROGRAMACION\213023_125_Ramirez - Fase 4\Proyecto_Fase4_SoftwareFJ.py", line 147, in validar_numero
+    raise DatosInvalidosError(
+    ...<2 lines>...
+    )
+DatosInvalidosError: La tarifa: se esperaba un valor numérico y se recibió str ('gratis').
+2026-11-16 10:29:50,001 | INFO | Operación 11 finalizada; el sistema continúa activo.
+2026-11-16 10:29:50,001 | ERROR | Operación 12 (error esperado): Servicio con capacidad booleana (True)
+Traceback (most recent call last):
+  File "c:\Users\ALEX JEFFERSON JR\Documents\INGENIERIA DE SISTEMAS - UNAD\MIS CURSOS\PERIODO 3 2026\5 - PROGRAMACION\213023_125_Ramirez - Fase 4\Proyecto_Fase4_SoftwareFJ.py", line 710, in ejecutar
+    salida = funcion()
+  File "c:\Users\ALEX JEFFERSON JR\Documents\INGENIERIA DE SISTEMAS - UNAD\MIS CURSOS\PERIODO 3 2026\5 - PROGRAMACION\213023_125_Ramirez - Fase 4\Proyecto_Fase4_SoftwareFJ.py", line 920, in <lambda>
+    lambda: ReservaSala("S005", 50000, True),
+            ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\ALEX JEFFERSON JR\Documents\INGENIERIA DE SISTEMAS - UNAD\MIS CURSOS\PERIODO 3 2026\5 - PROGRAMACION\213023_125_Ramirez - Fase 4\Proyecto_Fase4_SoftwareFJ.py", line 386, in __init__
+    validar_numero(capacidad, "La capacidad", entero=True,
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                   minimo=0, estricto_minimo=True)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\ALEX JEFFERSON JR\Documents\INGENIERIA DE SISTEMAS - UNAD\MIS CURSOS\PERIODO 3 2026\5 - PROGRAMACION\213023_125_Ramirez - Fase 4\Proyecto_Fase4_SoftwareFJ.py", line 147, in validar_numero
+    raise DatosInvalidosError(
+    ...<2 lines>...
+    )
+DatosInvalidosError: La capacidad: se esperaba un valor numérico y se recibió bool (True).
+2026-11-16 10:29:50,002 | INFO | Operación 12 finalizada; el sistema continúa activo.
+2026-11-16 10:29:50,002 | ERROR | Operación 13 (error esperado): Servicio con tarifa NaN (valor no finito)
+Traceback (most recent call last):
+  File "c:\Users\ALEX JEFFERSON JR\Documents\INGENIERIA DE SISTEMAS - UNAD\MIS CURSOS\PERIODO 3 2026\5 - PROGRAMACION\213023_125_Ramirez - Fase 4\Proyecto_Fase4_SoftwareFJ.py", line 710, in ejecutar
+    salida = funcion()
+  File "c:\Users\ALEX JEFFERSON JR\Documents\INGENIERIA DE SISTEMAS - UNAD\MIS CURSOS\PERIODO 3 2026\5 - PROGRAMACION\213023_125_Ramirez - Fase 4\Proyecto_Fase4_SoftwareFJ.py", line 924, in <lambda>
+    lambda: AlquilerEquipo("S006", float("nan"), "Portátil"),
+            ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\ALEX JEFFERSON JR\Documents\INGENIERIA DE SISTEMAS - UNAD\MIS CURSOS\PERIODO 3 2026\5 - PROGRAMACION\213023_125_Ramirez - Fase 4\Proyecto_Fase4_SoftwareFJ.py", line 412, in __init__
+    super().__init__(identificador, "Alquiler de equipos", tarifa_dia)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\ALEX JEFFERSON JR\Documents\INGENIERIA DE SISTEMAS - UNAD\MIS CURSOS\PERIODO 3 2026\5 - PROGRAMACION\213023_125_Ramirez - Fase 4\Proyecto_Fase4_SoftwareFJ.py", line 291, in __init__
+    validar_numero(tarifa, "La tarifa", minimo=0, estricto_minimo=True)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\ALEX JEFFERSON JR\Documents\INGENIERIA DE SISTEMAS - UNAD\MIS CURSOS\PERIODO 3 2026\5 - PROGRAMACION\213023_125_Ramirez - Fase 4\Proyecto_Fase4_SoftwareFJ.py", line 152, in validar_numero
+    raise DatosInvalidosError(f"{nombre}: no puede ser NaN ni infinito.")
+DatosInvalidosError: La tarifa: no puede ser NaN ni infinito.
+2026-11-16 10:29:50,002 | INFO | Operación 13 finalizada; el sistema continúa activo.
+2026-11-16 10:29:50,002 | ERROR | Operación 14 (error esperado): Alquiler sin tipo de equipo (vacío)
+Traceback (most recent call last):
+  File "c:\Users\ALEX JEFFERSON JR\Documents\INGENIERIA DE SISTEMAS - UNAD\MIS CURSOS\PERIODO 3 2026\5 - PROGRAMACION\213023_125_Ramirez - Fase 4\Proyecto_Fase4_SoftwareFJ.py", line 710, in ejecutar
+    salida = funcion()
+  File "c:\Users\ALEX JEFFERSON JR\Documents\INGENIERIA DE SISTEMAS - UNAD\MIS CURSOS\PERIODO 3 2026\5 - PROGRAMACION\213023_125_Ramirez - Fase 4\Proyecto_Fase4_SoftwareFJ.py", line 928, in <lambda>
+    lambda: AlquilerEquipo("S007", 80000, "   "),
+            ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\ALEX JEFFERSON JR\Documents\INGENIERIA DE SISTEMAS - UNAD\MIS CURSOS\PERIODO 3 2026\5 - PROGRAMACION\213023_125_Ramirez - Fase 4\Proyecto_Fase4_SoftwareFJ.py", line 413, in __init__
+    self.tipo_equipo = validar_texto(tipo_equipo, "El tipo de equipo")
+                       ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\ALEX JEFFERSON JR\Documents\INGENIERIA DE SISTEMAS - UNAD\MIS CURSOS\PERIODO 3 2026\5 - PROGRAMACION\213023_125_Ramirez - Fase 4\Proyecto_Fase4_SoftwareFJ.py", line 173, in validar_texto
+    raise DatosInvalidosError(
+        f"{nombre}: debe tener al menos {minimo} caracter(es)."
+    )
+DatosInvalidosError: El tipo de equipo: debe tener al menos 1 caracter(es).
+2026-11-16 10:29:50,003 | INFO | Operación 14 finalizada; el sistema continúa activo.
+2026-11-16 10:29:50,003 | ERROR | Operación 15 (error esperado): Instanciar la clase abstracta Servicio directamente
+Traceback (most recent call last):
+  File "c:\Users\ALEX JEFFERSON JR\Documents\INGENIERIA DE SISTEMAS - UNAD\MIS CURSOS\PERIODO 3 2026\5 - PROGRAMACION\213023_125_Ramirez - Fase 4\Proyecto_Fase4_SoftwareFJ.py", line 710, in ejecutar
+    salida = funcion()
+  File "c:\Users\ALEX JEFFERSON JR\Documents\INGENIERIA DE SISTEMAS - UNAD\MIS CURSOS\PERIODO 3 2026\5 - PROGRAMACION\213023_125_Ramirez - Fase 4\Proyecto_Fase4_SoftwareFJ.py", line 932, in <lambda>
+    lambda: Servicio("S008", "Genérico", 1000),
+            ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: Can't instantiate abstract class Servicio without an implementation for abstract methods 'calcular_costo', 'describir'
+2026-11-16 10:29:50,003 | INFO | Operación 15 finalizada; el sistema continúa activo.
+2026-11-16 10:29:50,004 | INFO | Reserva creada: R001.
+2026-11-16 10:29:50,004 | INFO | Reserva R001 confirmada para cliente C001.
+2026-11-16 10:29:50,004 | INFO | Operación 16 finalizada; el sistema continúa activo.
+2026-11-16 10:29:50,004 | INFO | Reserva R001 procesada. Costo: 150000.00 COP.
+2026-11-16 10:29:50,004 | INFO | Finalizó intento de procesamiento de reserva R001.
+2026-11-16 10:29:50,004 | INFO | Operación 17 finalizada; el sistema continúa activo.
+2026-11-16 10:29:50,004 | INFO | Reserva creada: R002.
+2026-11-16 10:29:50,004 | INFO | Reserva R002 confirmada para cliente C002.
+2026-11-16 10:29:50,004 | ERROR | Error al procesar reserva R002.
+Traceback (most recent call last):
+  File "c:\Users\ALEX JEFFERSON JR\Documents\INGENIERIA DE SISTEMAS - UNAD\MIS CURSOS\PERIODO 3 2026\5 - PROGRAMACION\213023_125_Ramirez - Fase 4\Proyecto_Fase4_SoftwareFJ.py", line 505, in procesar
+    costo = self.servicio.calcular_costo(self.duracion, **extras)
+  File "c:\Users\ALEX JEFFERSON JR\Documents\INGENIERIA DE SISTEMAS - UNAD\MIS CURSOS\PERIODO 3 2026\5 - PROGRAMACION\213023_125_Ramirez - Fase 4\Proyecto_Fase4_SoftwareFJ.py", line 398, in calcular_costo
+    raise DatosInvalidosError(
+    ...<2 lines>...
+    )
+DatosInvalidosError: La cantidad de personas (50) supera la capacidad de la sala (20).
+2026-11-16 10:29:50,004 | INFO | Finalizó intento de procesamiento de reserva R002.
+2026-11-16 10:29:50,004 | ERROR | Operación 18 (error esperado): Procesar reserva con más personas que la capacidad (50 > 20)
+Traceback (most recent call last):
+  File "c:\Users\ALEX JEFFERSON JR\Documents\INGENIERIA DE SISTEMAS - UNAD\MIS CURSOS\PERIODO 3 2026\5 - PROGRAMACION\213023_125_Ramirez - Fase 4\Proyecto_Fase4_SoftwareFJ.py", line 505, in procesar
+    costo = self.servicio.calcular_costo(self.duracion, **extras)
+  File "c:\Users\ALEX JEFFERSON JR\Documents\INGENIERIA DE SISTEMAS - UNAD\MIS CURSOS\PERIODO 3 2026\5 - PROGRAMACION\213023_125_Ramirez - Fase 4\Proyecto_Fase4_SoftwareFJ.py", line 398, in calcular_costo
+    raise DatosInvalidosError(
+    ...<2 lines>...
+    )
+DatosInvalidosError: La cantidad de personas (50) supera la capacidad de la sala (20).
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "c:\Users\ALEX JEFFERSON JR\Documents\INGENIERIA DE SISTEMAS - UNAD\MIS CURSOS\PERIODO 3 2026\5 - PROGRAMACION\213023_125_Ramirez - Fase 4\Proyecto_Fase4_SoftwareFJ.py", line 710, in ejecutar
+    salida = funcion()
+  File "c:\Users\ALEX JEFFERSON JR\Documents\INGENIERIA DE SISTEMAS - UNAD\MIS CURSOS\PERIODO 3 2026\5 - PROGRAMACION\213023_125_Ramirez - Fase 4\Proyecto_Fase4_SoftwareFJ.py", line 961, in op_reserva_sobrecupo
+    r.procesar(personas=50)   # supera la capacidad de 20
+    ~~~~~~~~~~^^^^^^^^^^^^^
+  File "c:\Users\ALEX JEFFERSON JR\Documents\INGENIERIA DE SISTEMAS - UNAD\MIS CURSOS\PERIODO 3 2026\5 - PROGRAMACION\213023_125_Ramirez - Fase 4\Proyecto_Fase4_SoftwareFJ.py", line 509, in procesar
+    raise ErrorSistema(
+        "No fue posible calcular el costo de la reserva."
+    ) from error
+ErrorSistema: No fue posible calcular el costo de la reserva.
+2026-11-16 10:29:50,005 | INFO | Operación 18 finalizada; el sistema continúa activo.
+2026-11-16 10:29:50,005 | INFO | Reserva R002 procesada. Costo: 100000.00 COP.
+2026-11-16 10:29:50,005 | INFO | Finalizó intento de procesamiento de reserva R002.
+2026-11-16 10:29:50,005 | INFO | Operación 19 finalizada; el sistema continúa activo.
+2026-11-16 10:29:50,005 | ERROR | Operación 20 (error esperado): Reserva con cliente NO registrado
+Traceback (most recent call last):
+  File "c:\Users\ALEX JEFFERSON JR\Documents\INGENIERIA DE SISTEMAS - UNAD\MIS CURSOS\PERIODO 3 2026\5 - PROGRAMACION\213023_125_Ramirez - Fase 4\Proyecto_Fase4_SoftwareFJ.py", line 710, in ejecutar
+    salida = funcion()
+  File "c:\Users\ALEX JEFFERSON JR\Documents\INGENIERIA DE SISTEMAS - UNAD\MIS CURSOS\PERIODO 3 2026\5 - PROGRAMACION\213023_125_Ramirez - Fase 4\Proyecto_Fase4_SoftwareFJ.py", line 985, in op_cliente_no_registrado
+    sistema.crear_reserva(Reserva("R003", externo, ctx["equipo"], 2))
+    ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\ALEX JEFFERSON JR\Documents\INGENIERIA DE SISTEMAS - UNAD\MIS CURSOS\PERIODO 3 2026\5 - PROGRAMACION\213023_125_Ramirez - Fase 4\Proyecto_Fase4_SoftwareFJ.py", line 580, in crear_reserva
+    self._exigir_registrado(self.clientes, reserva.cliente, "cliente")
+    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\ALEX JEFFERSON JR\Documents\INGENIERIA DE SISTEMAS - UNAD\MIS CURSOS\PERIODO 3 2026\5 - PROGRAMACION\213023_125_Ramirez - Fase 4\Proyecto_Fase4_SoftwareFJ.py", line 606, in _exigir_registrado
+    raise ElementoNoEncontradoError(
+        f"El {etiqueta} no está registrado en el sistema."
+    )
+ElementoNoEncontradoError: El cliente no está registrado en el sistema.
+2026-11-16 10:29:50,006 | INFO | Operación 20 finalizada; el sistema continúa activo.
+2026-11-16 10:29:50,006 | ERROR | Operación 21 (error esperado): Reserva con CLIENTE distinto pero con el mismo id (C001)
+Traceback (most recent call last):
+  File "c:\Users\ALEX JEFFERSON JR\Documents\INGENIERIA DE SISTEMAS - UNAD\MIS CURSOS\PERIODO 3 2026\5 - PROGRAMACION\213023_125_Ramirez - Fase 4\Proyecto_Fase4_SoftwareFJ.py", line 710, in ejecutar
+    salida = funcion()
+  File "c:\Users\ALEX JEFFERSON JR\Documents\INGENIERIA DE SISTEMAS - UNAD\MIS CURSOS\PERIODO 3 2026\5 - PROGRAMACION\213023_125_Ramirez - Fase 4\Proyecto_Fase4_SoftwareFJ.py", line 995, in op_cliente_impostor
+    sistema.crear_reserva(Reserva("R010", impostor, ctx["equipo"], 2))
+    ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\ALEX JEFFERSON JR\Documents\INGENIERIA DE SISTEMAS - UNAD\MIS CURSOS\PERIODO 3 2026\5 - PROGRAMACION\213023_125_Ramirez - Fase 4\Proyecto_Fase4_SoftwareFJ.py", line 580, in crear_reserva
+    self._exigir_registrado(self.clientes, reserva.cliente, "cliente")
+    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\ALEX JEFFERSON JR\Documents\INGENIERIA DE SISTEMAS - UNAD\MIS CURSOS\PERIODO 3 2026\5 - PROGRAMACION\213023_125_Ramirez - Fase 4\Proyecto_Fase4_SoftwareFJ.py", line 600, in _exigir_registrado
+    raise DatosInvalidosError(
+    ...<3 lines>...
+    )
+DatosInvalidosError: El cliente C001 de la reserva no es el objeto registrado en el sistema (mismo identificador, datos distintos).
+2026-11-16 10:29:50,006 | INFO | Operación 21 finalizada; el sistema continúa activo.
+2026-11-16 10:29:50,006 | ERROR | Operación 22 (error esperado): Reserva con SERVICIO distinto pero con el mismo id (S001, tarifa $1)
+Traceback (most recent call last):
+  File "c:\Users\ALEX JEFFERSON JR\Documents\INGENIERIA DE SISTEMAS - UNAD\MIS CURSOS\PERIODO 3 2026\5 - PROGRAMACION\213023_125_Ramirez - Fase 4\Proyecto_Fase4_SoftwareFJ.py", line 710, in ejecutar
+    salida = funcion()
+  File "c:\Users\ALEX JEFFERSON JR\Documents\INGENIERIA DE SISTEMAS - UNAD\MIS CURSOS\PERIODO 3 2026\5 - PROGRAMACION\213023_125_Ramirez - Fase 4\Proyecto_Fase4_SoftwareFJ.py", line 1007, in op_servicio_impostor
+    sistema.crear_reserva(Reserva("R011", ctx["c1"], falso, 2))
+    ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\ALEX JEFFERSON JR\Documents\INGENIERIA DE SISTEMAS - UNAD\MIS CURSOS\PERIODO 3 2026\5 - PROGRAMACION\213023_125_Ramirez - Fase 4\Proyecto_Fase4_SoftwareFJ.py", line 581, in crear_reserva
+    self._exigir_registrado(self.servicios, reserva.servicio, "servicio")
+    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\ALEX JEFFERSON JR\Documents\INGENIERIA DE SISTEMAS - UNAD\MIS CURSOS\PERIODO 3 2026\5 - PROGRAMACION\213023_125_Ramirez - Fase 4\Proyecto_Fase4_SoftwareFJ.py", line 600, in _exigir_registrado
+    raise DatosInvalidosError(
+    ...<3 lines>...
+    )
+DatosInvalidosError: El servicio S001 de la reserva no es el objeto registrado en el sistema (mismo identificador, datos distintos).
+2026-11-16 10:29:50,007 | INFO | Operación 22 finalizada; el sistema continúa activo.
+2026-11-16 10:29:50,007 | INFO | Reserva creada: R009.
+2026-11-16 10:29:50,007 | INFO | Reserva R009 confirmada para cliente C001.
+2026-11-16 10:29:50,007 | INFO | Reserva R009 procesada. Costo: 480000.00 COP.
+2026-11-16 10:29:50,007 | INFO | Finalizó intento de procesamiento de reserva R009.
+2026-11-16 10:29:50,007 | INFO | Operación 23 finalizada; el sistema continúa activo.
+2026-11-16 10:29:50,007 | ERROR | Operación 24 (error esperado): Reserva con duración inválida (0)
+Traceback (most recent call last):
+  File "c:\Users\ALEX JEFFERSON JR\Documents\INGENIERIA DE SISTEMAS - UNAD\MIS CURSOS\PERIODO 3 2026\5 - PROGRAMACION\213023_125_Ramirez - Fase 4\Proyecto_Fase4_SoftwareFJ.py", line 710, in ejecutar
+    salida = funcion()
+  File "c:\Users\ALEX JEFFERSON JR\Documents\INGENIERIA DE SISTEMAS - UNAD\MIS CURSOS\PERIODO 3 2026\5 - PROGRAMACION\213023_125_Ramirez - Fase 4\Proyecto_Fase4_SoftwareFJ.py", line 1041, in <lambda>
+    lambda: Reserva("R004", ctx["c2"], ctx["asesoria"], 0),
+            ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\ALEX JEFFERSON JR\Documents\INGENIERIA DE SISTEMAS - UNAD\MIS CURSOS\PERIODO 3 2026\5 - PROGRAMACION\213023_125_Ramirez - Fase 4\Proyecto_Fase4_SoftwareFJ.py", line 467, in __init__
+    validar_numero(duracion, "La duración", minimo=0, estricto_minimo=True)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\ALEX JEFFERSON JR\Documents\INGENIERIA DE SISTEMAS - UNAD\MIS CURSOS\PERIODO 3 2026\5 - PROGRAMACION\213023_125_Ramirez - Fase 4\Proyecto_Fase4_SoftwareFJ.py", line 158, in validar_numero
+    raise DatosInvalidosError(f"{nombre}: debe ser {simbolo} {minimo}.")
+DatosInvalidosError: La duración: debe ser mayor que 0.
+2026-11-16 10:29:50,007 | INFO | Operación 24 finalizada; el sistema continúa activo.
+2026-11-16 10:29:50,007 | ERROR | Operación 25 (error esperado): Reserva con duración de tipo texto ('dos')
+Traceback (most recent call last):
+  File "c:\Users\ALEX JEFFERSON JR\Documents\INGENIERIA DE SISTEMAS - UNAD\MIS CURSOS\PERIODO 3 2026\5 - PROGRAMACION\213023_125_Ramirez - Fase 4\Proyecto_Fase4_SoftwareFJ.py", line 710, in ejecutar
+    salida = funcion()
+  File "c:\Users\ALEX JEFFERSON JR\Documents\INGENIERIA DE SISTEMAS - UNAD\MIS CURSOS\PERIODO 3 2026\5 - PROGRAMACION\213023_125_Ramirez - Fase 4\Proyecto_Fase4_SoftwareFJ.py", line 1045, in <lambda>
+    lambda: Reserva("R005", ctx["c2"], ctx["asesoria"], "dos"),
+            ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\ALEX JEFFERSON JR\Documents\INGENIERIA DE SISTEMAS - UNAD\MIS CURSOS\PERIODO 3 2026\5 - PROGRAMACION\213023_125_Ramirez - Fase 4\Proyecto_Fase4_SoftwareFJ.py", line 467, in __init__
+    validar_numero(duracion, "La duración", minimo=0, estricto_minimo=True)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\ALEX JEFFERSON JR\Documents\INGENIERIA DE SISTEMAS - UNAD\MIS CURSOS\PERIODO 3 2026\5 - PROGRAMACION\213023_125_Ramirez - Fase 4\Proyecto_Fase4_SoftwareFJ.py", line 147, in validar_numero
+    raise DatosInvalidosError(
+    ...<2 lines>...
+    )
+DatosInvalidosError: La duración: se esperaba un valor numérico y se recibió str ('dos').
+2026-11-16 10:29:50,008 | INFO | Operación 25 finalizada; el sistema continúa activo.
+2026-11-16 10:29:50,008 | INFO | Reserva creada: R006.
+2026-11-16 10:29:50,008 | INFO | Reserva R006 cancelada.
+2026-11-16 10:29:50,008 | INFO | Operación 26 finalizada; el sistema continúa activo.
+2026-11-16 10:29:50,008 | ERROR | Operación 27 (error esperado): Procesar una reserva CANCELADA
+Traceback (most recent call last):
+  File "c:\Users\ALEX JEFFERSON JR\Documents\INGENIERIA DE SISTEMAS - UNAD\MIS CURSOS\PERIODO 3 2026\5 - PROGRAMACION\213023_125_Ramirez - Fase 4\Proyecto_Fase4_SoftwareFJ.py", line 710, in ejecutar
+    salida = funcion()
+  File "c:\Users\ALEX JEFFERSON JR\Documents\INGENIERIA DE SISTEMAS - UNAD\MIS CURSOS\PERIODO 3 2026\5 - PROGRAMACION\213023_125_Ramirez - Fase 4\Proyecto_Fase4_SoftwareFJ.py", line 1058, in <lambda>
+    "Procesar una reserva CANCELADA", lambda: ctx["r6"].procesar(),
+                                              ~~~~~~~~~~~~~~~~~~^^
+  File "c:\Users\ALEX JEFFERSON JR\Documents\INGENIERIA DE SISTEMAS - UNAD\MIS CURSOS\PERIODO 3 2026\5 - PROGRAMACION\213023_125_Ramirez - Fase 4\Proyecto_Fase4_SoftwareFJ.py", line 501, in procesar
+    raise OperacionNoPermitidaError(
+        "La reserva debe estar confirmada antes de procesarse."
+    )
+OperacionNoPermitidaError: La reserva debe estar confirmada antes de procesarse.
+2026-11-16 10:29:50,008 | INFO | Operación 27 finalizada; el sistema continúa activo.
+2026-11-16 10:29:50,008 | INFO | Reserva creada: R007.
+2026-11-16 10:29:50,008 | INFO | Servicio S003 deshabilitado.
+2026-11-16 10:29:50,008 | ERROR | Operación 28 (error esperado): Confirmar reserva de un servicio NO disponible
+Traceback (most recent call last):
+  File "c:\Users\ALEX JEFFERSON JR\Documents\INGENIERIA DE SISTEMAS - UNAD\MIS CURSOS\PERIODO 3 2026\5 - PROGRAMACION\213023_125_Ramirez - Fase 4\Proyecto_Fase4_SoftwareFJ.py", line 710, in ejecutar
+    salida = funcion()
+  File "c:\Users\ALEX JEFFERSON JR\Documents\INGENIERIA DE SISTEMAS - UNAD\MIS CURSOS\PERIODO 3 2026\5 - PROGRAMACION\213023_125_Ramirez - Fase 4\Proyecto_Fase4_SoftwareFJ.py", line 1070, in op_no_disponible
+    r.confirmar()   # debe fallar: el servicio está deshabilitado
+    ~~~~~~~~~~~^^
+  File "c:\Users\ALEX JEFFERSON JR\Documents\INGENIERIA DE SISTEMAS - UNAD\MIS CURSOS\PERIODO 3 2026\5 - PROGRAMACION\213023_125_Ramirez - Fase 4\Proyecto_Fase4_SoftwareFJ.py", line 480, in confirmar
+    self.servicio.validar_disponibilidad()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "c:\Users\ALEX JEFFERSON JR\Documents\INGENIERIA DE SISTEMAS - UNAD\MIS CURSOS\PERIODO 3 2026\5 - PROGRAMACION\213023_125_Ramirez - Fase 4\Proyecto_Fase4_SoftwareFJ.py", line 310, in validar_disponibilidad
+    raise ServicioNoDisponibleError(
+        f"El servicio '{self.nombre}' no está disponible."
+    )
+ServicioNoDisponibleError: El servicio 'Asesoría especializada' no está disponible.
+2026-11-16 10:29:50,009 | INFO | Operación 28 finalizada; el sistema continúa activo.
+2026-11-16 10:29:50,009 | INFO | Servicio S003 habilitado.
+2026-11-16 10:29:50,009 | INFO | Reserva R007 confirmada para cliente C001.
+2026-11-16 10:29:50,009 | INFO | Reserva R007 procesada. Costo: 240000.00 COP.
+2026-11-16 10:29:50,009 | INFO | Finalizó intento de procesamiento de reserva R007.
+2026-11-16 10:29:50,009 | INFO | Operación 29 finalizada; el sistema continúa activo.
+2026-11-16 10:29:50,009 | INFO | Operación 30 finalizada; el sistema continúa activo.
+2026-11-16 10:29:50,009 | INFO | Operación 31 finalizada; el sistema continúa activo.
+2026-11-16 10:29:50,009 | INFO | Operación 32 finalizada; el sistema continúa activo.
+2026-11-16 10:29:50,009 | ERROR | Operación 33 (error esperado): Pasar 'unidades' como opción con nombre (conflicto de parámetros)
+Traceback (most recent call last):
+  File "c:\Users\ALEX JEFFERSON JR\Documents\INGENIERIA DE SISTEMAS - UNAD\MIS CURSOS\PERIODO 3 2026\5 - PROGRAMACION\213023_125_Ramirez - Fase 4\Proyecto_Fase4_SoftwareFJ.py", line 710, in ejecutar
+    salida = funcion()
+  File "c:\Users\ALEX JEFFERSON JR\Documents\INGENIERIA DE SISTEMAS - UNAD\MIS CURSOS\PERIODO 3 2026\5 - PROGRAMACION\213023_125_Ramirez - Fase 4\Proyecto_Fase4_SoftwareFJ.py", line 1132, in <lambda>
+    lambda: ctx["equipo"].calcular_costo_total(2, unidades=5),
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "c:\Users\ALEX JEFFERSON JR\Documents\INGENIERIA DE SISTEMAS - UNAD\MIS CURSOS\PERIODO 3 2026\5 - PROGRAMACION\213023_125_Ramirez - Fase 4\Proyecto_Fase4_SoftwareFJ.py", line 366, in calcular_costo_total
+    subtotal = self.calcular_costo(unidades, **extras)  # polimórfico
+  File "c:\Users\ALEX JEFFERSON JR\Documents\INGENIERIA DE SISTEMAS - UNAD\MIS CURSOS\PERIODO 3 2026\5 - PROGRAMACION\213023_125_Ramirez - Fase 4\Proyecto_Fase4_SoftwareFJ.py", line 416, in calcular_costo
+    self._rechazar_extras_desconocidos(extras, {"cantidad"})
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\ALEX JEFFERSON JR\Documents\INGENIERIA DE SISTEMAS - UNAD\MIS CURSOS\PERIODO 3 2026\5 - PROGRAMACION\213023_125_Ramirez - Fase 4\Proyecto_Fase4_SoftwareFJ.py", line 320, in _rechazar_extras_desconocidos
+    raise DatosInvalidosError(
+        f"Parámetros no reconocidos: {sorted(desconocidos)}."
+    )
+DatosInvalidosError: Parámetros no reconocidos: ['unidades'].
+2026-11-16 10:29:50,010 | INFO | Operación 33 finalizada; el sistema continúa activo.
+2026-11-16 10:29:50,010 | ERROR | Operación 34 (error esperado): Equipo con cantidad=0 (opción inválida)
+Traceback (most recent call last):
+  File "c:\Users\ALEX JEFFERSON JR\Documents\INGENIERIA DE SISTEMAS - UNAD\MIS CURSOS\PERIODO 3 2026\5 - PROGRAMACION\213023_125_Ramirez - Fase 4\Proyecto_Fase4_SoftwareFJ.py", line 710, in ejecutar
+    salida = funcion()
+  File "c:\Users\ALEX JEFFERSON JR\Documents\INGENIERIA DE SISTEMAS - UNAD\MIS CURSOS\PERIODO 3 2026\5 - PROGRAMACION\213023_125_Ramirez - Fase 4\Proyecto_Fase4_SoftwareFJ.py", line 1137, in <lambda>
+    lambda: ctx["equipo"].calcular_costo_total(2, cantidad=0),
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "c:\Users\ALEX JEFFERSON JR\Documents\INGENIERIA DE SISTEMAS - UNAD\MIS CURSOS\PERIODO 3 2026\5 - PROGRAMACION\213023_125_Ramirez - Fase 4\Proyecto_Fase4_SoftwareFJ.py", line 366, in calcular_costo_total
+    subtotal = self.calcular_costo(unidades, **extras)  # polimórfico
+  File "c:\Users\ALEX JEFFERSON JR\Documents\INGENIERIA DE SISTEMAS - UNAD\MIS CURSOS\PERIODO 3 2026\5 - PROGRAMACION\213023_125_Ramirez - Fase 4\Proyecto_Fase4_SoftwareFJ.py", line 420, in calcular_costo
+    validar_numero(cantidad, "La cantidad de equipos", entero=True,
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                   minimo=1)
+                   ^^^^^^^^^
+  File "c:\Users\ALEX JEFFERSON JR\Documents\INGENIERIA DE SISTEMAS - UNAD\MIS CURSOS\PERIODO 3 2026\5 - PROGRAMACION\213023_125_Ramirez - Fase 4\Proyecto_Fase4_SoftwareFJ.py", line 158, in validar_numero
+    raise DatosInvalidosError(f"{nombre}: debe ser {simbolo} {minimo}.")
+DatosInvalidosError: La cantidad de equipos: debe ser mayor o igual a 1.
+2026-11-16 10:29:50,010 | INFO | Operación 34 finalizada; el sistema continúa activo.
+2026-11-16 10:29:50,010 | ERROR | Operación 35 (error esperado): Sala con más personas que la capacidad en calcular_costo_total
+Traceback (most recent call last):
+  File "c:\Users\ALEX JEFFERSON JR\Documents\INGENIERIA DE SISTEMAS - UNAD\MIS CURSOS\PERIODO 3 2026\5 - PROGRAMACION\213023_125_Ramirez - Fase 4\Proyecto_Fase4_SoftwareFJ.py", line 710, in ejecutar
+    salida = funcion()
+  File "c:\Users\ALEX JEFFERSON JR\Documents\INGENIERIA DE SISTEMAS - UNAD\MIS CURSOS\PERIODO 3 2026\5 - PROGRAMACION\213023_125_Ramirez - Fase 4\Proyecto_Fase4_SoftwareFJ.py", line 1141, in <lambda>
+    lambda: ctx["sala"].calcular_costo_total(2, personas=50),
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "c:\Users\ALEX JEFFERSON JR\Documents\INGENIERIA DE SISTEMAS - UNAD\MIS CURSOS\PERIODO 3 2026\5 - PROGRAMACION\213023_125_Ramirez - Fase 4\Proyecto_Fase4_SoftwareFJ.py", line 366, in calcular_costo_total
+    subtotal = self.calcular_costo(unidades, **extras)  # polimórfico
+  File "c:\Users\ALEX JEFFERSON JR\Documents\INGENIERIA DE SISTEMAS - UNAD\MIS CURSOS\PERIODO 3 2026\5 - PROGRAMACION\213023_125_Ramirez - Fase 4\Proyecto_Fase4_SoftwareFJ.py", line 398, in calcular_costo
+    raise DatosInvalidosError(
+    ...<2 lines>...
+    )
+DatosInvalidosError: La cantidad de personas (50) supera la capacidad de la sala (20).
+2026-11-16 10:29:50,011 | INFO | Operación 35 finalizada; el sistema continúa activo.
+2026-11-16 10:29:50,012 | ERROR | Operación 36 (error esperado): Descuento de tipo texto ('diez')
+Traceback (most recent call last):
+  File "c:\Users\ALEX JEFFERSON JR\Documents\INGENIERIA DE SISTEMAS - UNAD\MIS CURSOS\PERIODO 3 2026\5 - PROGRAMACION\213023_125_Ramirez - Fase 4\Proyecto_Fase4_SoftwareFJ.py", line 710, in ejecutar
+    salida = funcion()
+  File "c:\Users\ALEX JEFFERSON JR\Documents\INGENIERIA DE SISTEMAS - UNAD\MIS CURSOS\PERIODO 3 2026\5 - PROGRAMACION\213023_125_Ramirez - Fase 4\Proyecto_Fase4_SoftwareFJ.py", line 1145, in <lambda>
+    lambda: ctx["sala"].calcular_costo_total(2, "diez"),
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "c:\Users\ALEX JEFFERSON JR\Documents\INGENIERIA DE SISTEMAS - UNAD\MIS CURSOS\PERIODO 3 2026\5 - PROGRAMACION\213023_125_Ramirez - Fase 4\Proyecto_Fase4_SoftwareFJ.py", line 363, in calcular_costo_total
+    validar_numero(descuento, "El descuento", minimo=0, maximo=100)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\ALEX JEFFERSON JR\Documents\INGENIERIA DE SISTEMAS - UNAD\MIS CURSOS\PERIODO 3 2026\5 - PROGRAMACION\213023_125_Ramirez - Fase 4\Proyecto_Fase4_SoftwareFJ.py", line 147, in validar_numero
+    raise DatosInvalidosError(
+    ...<2 lines>...
+    )
+DatosInvalidosError: El descuento: se esperaba un valor numérico y se recibió str ('diez').
+2026-11-16 10:29:50,013 | INFO | Operación 36 finalizada; el sistema continúa activo.
+2026-11-16 10:29:50,013 | ERROR | Operación 37 (error esperado): Descuento None
+Traceback (most recent call last):
+  File "c:\Users\ALEX JEFFERSON JR\Documents\INGENIERIA DE SISTEMAS - UNAD\MIS CURSOS\PERIODO 3 2026\5 - PROGRAMACION\213023_125_Ramirez - Fase 4\Proyecto_Fase4_SoftwareFJ.py", line 710, in ejecutar
+    salida = funcion()
+  File "c:\Users\ALEX JEFFERSON JR\Documents\INGENIERIA DE SISTEMAS - UNAD\MIS CURSOS\PERIODO 3 2026\5 - PROGRAMACION\213023_125_Ramirez - Fase 4\Proyecto_Fase4_SoftwareFJ.py", line 1149, in <lambda>
+    lambda: ctx["sala"].calcular_costo_total(2, None),
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "c:\Users\ALEX JEFFERSON JR\Documents\INGENIERIA DE SISTEMAS - UNAD\MIS CURSOS\PERIODO 3 2026\5 - PROGRAMACION\213023_125_Ramirez - Fase 4\Proyecto_Fase4_SoftwareFJ.py", line 363, in calcular_costo_total
+    validar_numero(descuento, "El descuento", minimo=0, maximo=100)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\ALEX JEFFERSON JR\Documents\INGENIERIA DE SISTEMAS - UNAD\MIS CURSOS\PERIODO 3 2026\5 - PROGRAMACION\213023_125_Ramirez - Fase 4\Proyecto_Fase4_SoftwareFJ.py", line 147, in validar_numero
+    raise DatosInvalidosError(
+    ...<2 lines>...
+    )
+DatosInvalidosError: El descuento: se esperaba un valor numérico y se recibió NoneType (None).
+2026-11-16 10:29:50,014 | INFO | Operación 37 finalizada; el sistema continúa activo.
+2026-11-16 10:29:50,014 | ERROR | Operación 38 (error esperado): Impuesto NaN (no finito)
+Traceback (most recent call last):
+  File "c:\Users\ALEX JEFFERSON JR\Documents\INGENIERIA DE SISTEMAS - UNAD\MIS CURSOS\PERIODO 3 2026\5 - PROGRAMACION\213023_125_Ramirez - Fase 4\Proyecto_Fase4_SoftwareFJ.py", line 710, in ejecutar
+    salida = funcion()
+  File "c:\Users\ALEX JEFFERSON JR\Documents\INGENIERIA DE SISTEMAS - UNAD\MIS CURSOS\PERIODO 3 2026\5 - PROGRAMACION\213023_125_Ramirez - Fase 4\Proyecto_Fase4_SoftwareFJ.py", line 1153, in <lambda>
+    lambda: ctx["sala"].calcular_costo_total(2, 10, float("nan")),
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\ALEX JEFFERSON JR\Documents\INGENIERIA DE SISTEMAS - UNAD\MIS CURSOS\PERIODO 3 2026\5 - PROGRAMACION\213023_125_Ramirez - Fase 4\Proyecto_Fase4_SoftwareFJ.py", line 364, in calcular_costo_total
+    validar_numero(impuesto, "El impuesto", minimo=0, maximo=100)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\ALEX JEFFERSON JR\Documents\INGENIERIA DE SISTEMAS - UNAD\MIS CURSOS\PERIODO 3 2026\5 - PROGRAMACION\213023_125_Ramirez - Fase 4\Proyecto_Fase4_SoftwareFJ.py", line 152, in validar_numero
+    raise DatosInvalidosError(f"{nombre}: no puede ser NaN ni infinito.")
+DatosInvalidosError: El impuesto: no puede ser NaN ni infinito.
+2026-11-16 10:29:50,015 | INFO | Operación 38 finalizada; el sistema continúa activo.
+2026-11-16 10:29:50,015 | ERROR | Operación 39 (error esperado): Descuento booleano (True)
+Traceback (most recent call last):
+  File "c:\Users\ALEX JEFFERSON JR\Documents\INGENIERIA DE SISTEMAS - UNAD\MIS CURSOS\PERIODO 3 2026\5 - PROGRAMACION\213023_125_Ramirez - Fase 4\Proyecto_Fase4_SoftwareFJ.py", line 710, in ejecutar
+    salida = funcion()
+  File "c:\Users\ALEX JEFFERSON JR\Documents\INGENIERIA DE SISTEMAS - UNAD\MIS CURSOS\PERIODO 3 2026\5 - PROGRAMACION\213023_125_Ramirez - Fase 4\Proyecto_Fase4_SoftwareFJ.py", line 1157, in <lambda>
+    lambda: ctx["sala"].calcular_costo_total(2, True),
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "c:\Users\ALEX JEFFERSON JR\Documents\INGENIERIA DE SISTEMAS - UNAD\MIS CURSOS\PERIODO 3 2026\5 - PROGRAMACION\213023_125_Ramirez - Fase 4\Proyecto_Fase4_SoftwareFJ.py", line 363, in calcular_costo_total
+    validar_numero(descuento, "El descuento", minimo=0, maximo=100)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\ALEX JEFFERSON JR\Documents\INGENIERIA DE SISTEMAS - UNAD\MIS CURSOS\PERIODO 3 2026\5 - PROGRAMACION\213023_125_Ramirez - Fase 4\Proyecto_Fase4_SoftwareFJ.py", line 147, in validar_numero
+    raise DatosInvalidosError(
+    ...<2 lines>...
+    )
+DatosInvalidosError: El descuento: se esperaba un valor numérico y se recibió bool (True).
+2026-11-16 10:29:50,016 | INFO | Operación 39 finalizada; el sistema continúa activo.
+2026-11-16 10:29:50,016 | ERROR | Operación 40 (error esperado): Descuento fuera de rango (150%)
+Traceback (most recent call last):
+  File "c:\Users\ALEX JEFFERSON JR\Documents\INGENIERIA DE SISTEMAS - UNAD\MIS CURSOS\PERIODO 3 2026\5 - PROGRAMACION\213023_125_Ramirez - Fase 4\Proyecto_Fase4_SoftwareFJ.py", line 710, in ejecutar
+    salida = funcion()
+  File "c:\Users\ALEX JEFFERSON JR\Documents\INGENIERIA DE SISTEMAS - UNAD\MIS CURSOS\PERIODO 3 2026\5 - PROGRAMACION\213023_125_Ramirez - Fase 4\Proyecto_Fase4_SoftwareFJ.py", line 1161, in <lambda>
+    lambda: ctx["sala"].calcular_costo_total(2, 150),
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^
+  File "c:\Users\ALEX JEFFERSON JR\Documents\INGENIERIA DE SISTEMAS - UNAD\MIS CURSOS\PERIODO 3 2026\5 - PROGRAMACION\213023_125_Ramirez - Fase 4\Proyecto_Fase4_SoftwareFJ.py", line 363, in calcular_costo_total
+    validar_numero(descuento, "El descuento", minimo=0, maximo=100)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\ALEX JEFFERSON JR\Documents\INGENIERIA DE SISTEMAS - UNAD\MIS CURSOS\PERIODO 3 2026\5 - PROGRAMACION\213023_125_Ramirez - Fase 4\Proyecto_Fase4_SoftwareFJ.py", line 160, in validar_numero
+    raise DatosInvalidosError(f"{nombre}: debe ser menor o igual a {maximo}.")
+DatosInvalidosError: El descuento: debe ser menor o igual a 100.
+2026-11-16 10:29:50,017 | INFO | Operación 40 finalizada; el sistema continúa activo.
+2026-11-16 10:29:50,017 | ERROR | Operación 41 (error esperado): Demasiados parámetros (3 ajustes)
+Traceback (most recent call last):
+  File "c:\Users\ALEX JEFFERSON JR\Documents\INGENIERIA DE SISTEMAS - UNAD\MIS CURSOS\PERIODO 3 2026\5 - PROGRAMACION\213023_125_Ramirez - Fase 4\Proyecto_Fase4_SoftwareFJ.py", line 710, in ejecutar
+    salida = funcion()
+  File "c:\Users\ALEX JEFFERSON JR\Documents\INGENIERIA DE SISTEMAS - UNAD\MIS CURSOS\PERIODO 3 2026\5 - PROGRAMACION\213023_125_Ramirez - Fase 4\Proyecto_Fase4_SoftwareFJ.py", line 1165, in <lambda>
+    lambda: ctx["sala"].calcular_costo_total(2, 10, 19, 5),
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "c:\Users\ALEX JEFFERSON JR\Documents\INGENIERIA DE SISTEMAS - UNAD\MIS CURSOS\PERIODO 3 2026\5 - PROGRAMACION\213023_125_Ramirez - Fase 4\Proyecto_Fase4_SoftwareFJ.py", line 354, in calcular_costo_total
+    raise DatosInvalidosError(
+    ...<2 lines>...
+    )
+DatosInvalidosError: Se recibieron demasiados parámetros: solo se admiten descuento e impuesto.
+2026-11-16 10:29:50,018 | INFO | Operación 41 finalizada; el sistema continúa activo.
+2026-11-16 10:29:50,018 | ERROR | Operación 42 (error esperado): Unidades (horas) de tipo texto
+Traceback (most recent call last):
+  File "c:\Users\ALEX JEFFERSON JR\Documents\INGENIERIA DE SISTEMAS - UNAD\MIS CURSOS\PERIODO 3 2026\5 - PROGRAMACION\213023_125_Ramirez - Fase 4\Proyecto_Fase4_SoftwareFJ.py", line 710, in ejecutar
+    salida = funcion()
+  File "c:\Users\ALEX JEFFERSON JR\Documents\INGENIERIA DE SISTEMAS - UNAD\MIS CURSOS\PERIODO 3 2026\5 - PROGRAMACION\213023_125_Ramirez - Fase 4\Proyecto_Fase4_SoftwareFJ.py", line 1169, in <lambda>
+    lambda: ctx["sala"].calcular_costo_total("3"),
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "c:\Users\ALEX JEFFERSON JR\Documents\INGENIERIA DE SISTEMAS - UNAD\MIS CURSOS\PERIODO 3 2026\5 - PROGRAMACION\213023_125_Ramirez - Fase 4\Proyecto_Fase4_SoftwareFJ.py", line 366, in calcular_costo_total
+    subtotal = self.calcular_costo(unidades, **extras)  # polimórfico
+  File "c:\Users\ALEX JEFFERSON JR\Documents\INGENIERIA DE SISTEMAS - UNAD\MIS CURSOS\PERIODO 3 2026\5 - PROGRAMACION\213023_125_Ramirez - Fase 4\Proyecto_Fase4_SoftwareFJ.py", line 393, in calcular_costo
+    validar_numero(horas, "Las horas", minimo=0, estricto_minimo=True)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\ALEX JEFFERSON JR\Documents\INGENIERIA DE SISTEMAS - UNAD\MIS CURSOS\PERIODO 3 2026\5 - PROGRAMACION\213023_125_Ramirez - Fase 4\Proyecto_Fase4_SoftwareFJ.py", line 147, in validar_numero
+    raise DatosInvalidosError(
+    ...<2 lines>...
+    )
+DatosInvalidosError: Las horas: se esperaba un valor numérico y se recibió str ('3').
+2026-11-16 10:29:50,019 | INFO | Operación 42 finalizada; el sistema continúa activo.
+2026-11-16 10:29:50,019 | INFO | Servicio registrado: S099.
+2026-11-16 10:29:50,019 | INFO | Reserva creada: R008.
+2026-11-16 10:29:50,019 | INFO | Reserva R008 confirmada para cliente C001.
+2026-11-16 10:29:50,019 | ERROR | Reserva R008: costo inconsistente (0).
+2026-11-16 10:29:50,019 | INFO | Finalizó intento de procesamiento de reserva R008.
+2026-11-16 10:29:50,019 | ERROR | Operación 43 (error esperado): Cálculo inconsistente (costo 0 devuelto por el servicio)
+Traceback (most recent call last):
+  File "c:\Users\ALEX JEFFERSON JR\Documents\INGENIERIA DE SISTEMAS - UNAD\MIS CURSOS\PERIODO 3 2026\5 - PROGRAMACION\213023_125_Ramirez - Fase 4\Proyecto_Fase4_SoftwareFJ.py", line 710, in ejecutar
+    salida = funcion()
+  File "c:\Users\ALEX JEFFERSON JR\Documents\INGENIERIA DE SISTEMAS - UNAD\MIS CURSOS\PERIODO 3 2026\5 - PROGRAMACION\213023_125_Ramirez - Fase 4\Proyecto_Fase4_SoftwareFJ.py", line 1179, in op_costo_inconsistente
+    r.procesar()
+    ~~~~~~~~~~^^
+  File "c:\Users\ALEX JEFFERSON JR\Documents\INGENIERIA DE SISTEMAS - UNAD\MIS CURSOS\PERIODO 3 2026\5 - PROGRAMACION\213023_125_Ramirez - Fase 4\Proyecto_Fase4_SoftwareFJ.py", line 520, in procesar
+    raise ErrorSistema("El cálculo produjo un costo inconsistente.")
+ErrorSistema: El cálculo produjo un costo inconsistente.
+2026-11-16 10:29:50,020 | INFO | Operación 43 finalizada; el sistema continúa activo.
+2026-11-16 10:29:50,020 | ERROR | Operación 44 (error esperado): Buscar cliente inexistente
+Traceback (most recent call last):
+  File "c:\Users\ALEX JEFFERSON JR\Documents\INGENIERIA DE SISTEMAS - UNAD\MIS CURSOS\PERIODO 3 2026\5 - PROGRAMACION\213023_125_Ramirez - Fase 4\Proyecto_Fase4_SoftwareFJ.py", line 710, in ejecutar
+    salida = funcion()
+  File "c:\Users\ALEX JEFFERSON JR\Documents\INGENIERIA DE SISTEMAS - UNAD\MIS CURSOS\PERIODO 3 2026\5 - PROGRAMACION\213023_125_Ramirez - Fase 4\Proyecto_Fase4_SoftwareFJ.py", line 1189, in <lambda>
+    lambda: sistema.buscar_cliente("C404"),
+            ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^
+  File "c:\Users\ALEX JEFFERSON JR\Documents\INGENIERIA DE SISTEMAS - UNAD\MIS CURSOS\PERIODO 3 2026\5 - PROGRAMACION\213023_125_Ramirez - Fase 4\Proyecto_Fase4_SoftwareFJ.py", line 625, in buscar_cliente
+    raise ElementoNoEncontradoError(f"No existe el cliente {identificador}.")
+ElementoNoEncontradoError: No existe el cliente C404.
+2026-11-16 10:29:50,020 | INFO | Operación 44 finalizada; el sistema continúa activo.
+2026-11-16 10:29:50,020 | INFO | Operación 45 finalizada; el sistema continúa activo.
+2026-11-16 10:29:50,020 | INFO | Operación 46 finalizada; el sistema continúa activo.
+2026-11-16 10:29:50,020 | INFO | ===== FIN DE LA DEMOSTRACIÓN (todo esperado: True) =====
